@@ -67,5 +67,5 @@ Have fun testing your accuracy and aim to achieve perfection! 🎯
 
 This game is built using:
 * **HTML5** – The markup language for structuring the game.
-* **CSS3** – Styling and visual effects.
+* **CSS** – Styling and visual effects.
 * **JavaScript** – Game logic and interactivity.
