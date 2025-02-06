@@ -1,0 +1,34 @@
+#hero{
+    width: 100vw;
+    min-height: 100vh; 
+    background-image: url("../img/back.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    background-size: cover;
+}
+
+.title{
+    margin-top: 50px;
+    font-family: 'Jaro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+    color: #000000;
+    margin-bottom: 1px;
+}
+
+.linea{
+    stroke: 2px;
+    color: #000000;
+}
+
+.rules{
+    font-family: 'Jersey 10';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 24px;
+    color: #000000;
+}
