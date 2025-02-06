@@ -41,8 +41,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[  <img src="static/img/game-screenshot.png" alt="Shooting Target Logo" width="1200" height="600" style="margin: 0 auto; display: block;">]
-
 **Shooting-Target-WebGame** is an interactive browser-based game built with HTML, CSS, and JavaScript. The game challenges your precision as you try to click on a target drawn on the screen. With every click, your score is calculated based on how close you are to the center of the target.
 
 <!-- GAME RULES -->
