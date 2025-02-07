@@ -22,7 +22,7 @@ function startGame() {
         gameActive = false;
         document.getElementById('start').disabled = false;
         document.getElementById('time').textContent = "TEMPO SCADUTO!";
-    }, 3000);
+    }, 5000);
 }
 
 function draw() {
