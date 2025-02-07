@@ -15,13 +15,13 @@ function startGame() {
     points = 0;
     gameActive = true;
     startTime = Date.now();
-    document.getElementById('points').textContent = 'PUNTI ATTUALI == 0';
+    document.getElementById('points').innerText = 'PUNTI ATTUALI == 0';
     document.getElementById('start').disabled = true;
     
     timeoutId = setTimeout(() => {
         gameActive = false;
         document.getElementById('start').disabled = false;
-        document.getElementById('time').textContent = "TEMPO SCADUTO!";
+        document.getElementById('time').innerText = "TEMPO SCADUTO!";
     }, 5000);
 }
 
@@ -37,7 +37,7 @@ function draw() {
     if (gameActive) {
         let elapsed = Date.now() - startTime;
         let remaining = (5000 - elapsed)/1000;
-        document.getElementById('time').textContent = 
+        document.getElementById('time').innerText = 
             `Tempo rimanente: ${remaining.toFixed(2)}`;
     }
 }
@@ -59,7 +59,7 @@ function mouseClicked(){
 
         if (distance <= outerRadius && distance >= innerRadius) {
             points += 50 - ((8 - i)/2) * 10;
-            document.getElementById('points').textContent = 
+            document.getElementById('points').innerText = 
                 `PUNTI ATTUALI == ${points}`;
             break;
         }
