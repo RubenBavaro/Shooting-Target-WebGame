@@ -1,3 +1,18 @@
+#cerchi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px; 
+    margin-top: -40px;
+}
+
+#cerchi-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 #hero{
     width: 100vw;
     min-height: 100vh; 
@@ -10,7 +25,7 @@
 
 .title{
     margin-top: 50px;
-    font-family: 'Jaro';
+    font-family: 'Jaro', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 48px;
@@ -19,16 +34,69 @@
     margin-bottom: 1px;
 }
 
-.linea{
-    stroke: 2px;
-    color: #000000;
+.linea {
+    width: 100%;
+    border-top: 2px solid #000000; 
+    margin: -5px 0px 5px 0px; 
 }
 
 .rules{
-    font-family: 'Jersey 10';
+    font-family: 'Jersey 25', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
     line-height: 24px;
     color: #000000;
+}
+
+#points{
+    margin-top: 200px;
+    font-family: 'Jersey 25', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 39px;
+    text-align: center;
+    color: #000000;
+}
+
+#time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -40px;
+    font-family: 'Jersey 25', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 39px;
+    text-align: center;
+    color: #000000;
+}
+
+#start{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    gap: 8px;
+    font-family: 'Jersey 25', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    background: #E8B931;
+    text-align: center;
+    border: 1px solid #2C2C2C;
+    border-radius: 8px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
