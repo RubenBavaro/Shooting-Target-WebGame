@@ -32,6 +32,7 @@ function startGame() {
 }
 
 function draw() {
+    pixelDensity(5);
     let maxDiameter = width; 
     let numCircles = 9;
     for (let i = 0; i < numCircles; i++) {
