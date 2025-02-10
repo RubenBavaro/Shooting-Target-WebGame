@@ -3,6 +3,11 @@ let points = 0;
 let startTime = null;
 let gameActive = false;
 let timeoutId = null;
+let arrows = [];
+
+function generateRandomInteger(min=0, max=2) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
 
 function setup() {
     let canvas = createCanvas(300, 300);
@@ -13,6 +18,7 @@ function setup() {
 
 function startGame() {
     points = 0;
+    arrows = [];
     gameActive = true;
     startTime = Date.now();
     document.getElementById('points').innerText = 'PUNTI ATTUALI == 0';
@@ -33,6 +39,22 @@ function draw() {
         fill(colors[i]);
         ellipse(width / 2, height / 2, diameter, diameter); 
     }
+
+    stroke(0);
+    strokeWeight(2);
+    arrows.forEach(arrow => {
+
+        let dx = mouseX - arrow.x;
+        let dy = mouseY - arrow.y;
+        let angle = atan2(dy, dx);
+        
+
+        let length = (arrow.length + 1) * 10;
+        let endX = arrow.x + cos(angle) * length;
+        let endY = arrow.y + sin(angle) * length;
+        
+        line(arrow.x, arrow.y, endX, endY);
+    });
 
     if (gameActive) {
         let elapsed = Date.now() - startTime;
@@ -61,6 +83,12 @@ function mouseClicked(){
             points += 50 - ((8 - i)/2) * 10;
             document.getElementById('points').innerText = 
                 `PUNTI ATTUALI == ${points}`;
+            
+            arrows.push({
+                x: mouseX,
+                y: mouseY,
+                length: generateRandomInteger()
+            });
             break;
         }
     }
